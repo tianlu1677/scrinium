@@ -65,11 +65,9 @@ gem 'remotipart'
 # 编辑器
 gem "wysiwyg-rails", "2.0.0.pre.rc.3"
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-marked'
-  gem 'rails-assets-highlightjs'
-  gem 'rails-assets-jcrop'
-end
+# source 'https://rails-assets.org' do
+#   gem 'rails-assets-highlightjs'
+# end
 
 # 全局设定
 gem 'settingslogic'
@@ -108,9 +106,9 @@ group :development, :test do
   # 部署
   gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-rails'
-  gem 'capistrano-rvm'
-  gem "capistrano-scm-copy"
+  gem 'capistrano-scm-copy'
   gem 'net-ssh', '~> 2.8.0'
+  gem 'capistrano-passenger'
   gem 'capistrano-sidekiq'
 
   # 生成假数据，faker重构版本

@@ -49,8 +49,9 @@ Rails.application.routes.draw do
     get 'mailbox/restore_message/:id' => 'mailbox#restore_message', as: :restore_message
     get 'following' => 'relationships#following', as: :following
     get 'followers' => 'relationships#followers', as: :followers
-    get :change_password, on: :collection
-    put :update_password, on: :collection
+    resources :achievements
+    resources :experiences
+    resources :user_options
   end
   get '/follow/:followed_id' => 'relationships#follow', as: :follow_user
   get '/unfollow/:followed_id' => 'relationships#unfollow', as: :unfollow_user
@@ -87,6 +88,7 @@ Rails.application.routes.draw do
     get :feed, on: :collection
     resources :topics
     resources :nodes
+    resources :group_options
   end
   resources :activities
   resources :posts do

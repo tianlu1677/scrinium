@@ -1,6 +1,6 @@
 <div class='panel panel-default'>
   <div class='panel-body center'>
-    <ul class="left-side-list">
+    <ul class="vertical-clean-list">
       <li>
         <a href='<%= user_path(@user) %>'>
           <%= avatar @user, size: "100x100" %>
@@ -33,7 +33,7 @@
       </li>
       <% if policy(@user).update? %>
         <li><%= link_to fa_icon('edit', text: t('action.edit')), [ :edit, @user ] %></li>
-        <li><%= link_to fa_icon('key', text: t('devise.password.reset')), change_password_users_path %></li>
+        <li><%= link_to fa_icon('key', text: t('devise.views.change_password')), edit_user_registration_path %></li>
       <% end %>
     </ul>
   </div>
